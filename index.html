@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>If I were rich</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="container">
+  <h1>シンプル家計簿</h1>
+
+  <!-- 入力フォームエリア -->
+  <div class="input-group">
+    <div class="form-item">
+      <label>日付</label>
+      <input type="date" id="date">
+    </div>
+    <div class="form-item">
+      <label>項目</label>
+      <input type="text" id="description" placeholder="例: 食費、給料">
+    </div>
+    <div class="form-item">
+      <label>金額 (円)</label>
+      <input type="number" id="amount" placeholder="0">
+    </div>
+    <div class="form-item">
+      <label>種類</label>
+      <select id="type">
+        <option value="expense">支出</option>
+        <option value="income">収入</option>
+      </select>
+    </div>
+    <button onclick="addTransaction()">追加</button>
+  </div>
+
+  <!-- 合計表示エリア -->
+  <div class="summary">
+    <div class="summary-item">
+      <h3>収入</h3>
+      <p id="total-income" class="plus">¥0</p>
+    </div>
+    <div class="summary-item">
+      <h3>支出</h3>
+      <p id="total-expense" class="minus">¥0</p>
+    </div>
+    <div class="summary-item">
+      <h3>残高</h3>
+      <p id="balance">¥0</p>
+    </div>
+  </div>
+
+  <!-- リスト表示エリア -->
+  <div class="history">
+    <h2>履歴</h2>
+    <ul id="list" class="list">
+      <!-- ここにJavaScriptでリストが追加されます -->
+    </ul>
+  </div>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
